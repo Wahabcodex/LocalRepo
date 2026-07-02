@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS — Digital Agency</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="script" href="script.js">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       CURSOR GLOW
+  ═══════════════════════════════════════════ -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER / NAV
+  ═══════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark">N</span>
+        <span class="logo-text">NEXUS</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#" class="btn-ghost"><i class="fa-regular fa-envelope"></i> Say Hello</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Award-winning creative studio — 2024
+        </div>
+        <h1 class="hero-heading">
+          We Build<br />
+          <span class="gradient-text">Digital</span><br />
+          Experiences
+        </h1>
+        <p class="hero-desc">
+          Crafting immersive brands, sleek interfaces, and data-driven campaigns that captivate audiences and accelerate growth.
+        </p>
+        <div class="hero-ctas">
+          <a href="#portfolio" class="btn-primary">View Our Work <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#about" class="btn-outline">Who We Are</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">180+</span><span class="stat-label">Projects Done</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">94%</span><span class="stat-label">Client Satisfaction</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">12yr</span><span class="stat-label">Experience</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <!-- 3D Illustration (SVG-based) -->
+        <div class="hero-3d-wrap">
+          <div class="floating-card card-1">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>+240% Growth</span>
+          </div>
+          <div class="floating-card card-2">
+            <i class="fa-solid fa-star"></i>
+            <span>5-Star Rated</span>
+          </div>
+          <div class="hero-3d-sphere">
+            <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" class="sphere-svg">
+              <defs>
+                <radialGradient id="sphereGrad" cx="35%" cy="35%" r="65%">
+                  <stop offset="0%" stop-color="#a78bfa"/>
+                  <stop offset="50%" stop-color="#6d28d9"/>
+                  <stop offset="100%" stop-color="#0f0a1e"/>
+                </radialGradient>
+                <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.6"/>
+                  <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+                </radialGradient>
+                <filter id="blur">
+                  <feGaussianBlur stdDeviation="18"/>
+                </filter>
+              </defs>
+              <!-- Glow -->
+              <ellipse cx="210" cy="340" rx="130" ry="30" fill="url(#glowGrad)" filter="url(#blur)"/>
+              <!-- Main sphere -->
+              <circle cx="210" cy="195" r="170" fill="url(#sphereGrad)"/>
+              <!-- Highlight -->
+              <ellipse cx="165" cy="135" rx="55" ry="35" fill="white" opacity="0.12" transform="rotate(-20 165 135)"/>
+              <!-- Ring -->
+              <ellipse cx="210" cy="195" rx="200" ry="55" fill="none" stroke="url(#sphereGrad)" stroke-width="12" opacity="0.5" transform="rotate(-22 210 195)"/>
+              <ellipse cx="210" cy="195" rx="200" ry="55" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0.8" transform="rotate(-22 210 195)"/>
+              <!-- Code lines on sphere -->
+              <text x="145" y="175" font-family="monospace" font-size="11" fill="#c4b5fd" opacity="0.7">&lt;nexus/&gt;</text>
+              <text x="168" y="210" font-family="monospace" font-size="9" fill="#818cf8" opacity="0.5">design.create()</text>
+              <text x="150" y="240" font-family="monospace" font-size="9" fill="#c4b5fd" opacity="0.5">ui.launch()</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CLIENTS LOGO STRIP
+  ═══════════════════════════════════════════ -->
+  <section class="clients-strip">
+    <div class="container">
+      <p class="clients-label">Trusted by forward-thinking companies</p>
+      <div class="logos-track">
+        <div class="logos-inner">
+          <div class="logo-item"><i class="fa-brands fa-google"></i> <span>Google</span></div>
+          <div class="logo-item"><i class="fa-brands fa-spotify"></i> <span>Spotify</span></div>
+          <div class="logo-item"><i class="fa-brands fa-stripe"></i> <span>Stripe</span></div>
+          <div class="logo-item"><i class="fa-brands fa-shopify"></i> <span>Shopify</span></div>
+          <div class="logo-item"><i class="fa-brands fa-slack"></i> <span>Slack</span></div>
+          <div class="logo-item"><i class="fa-brands fa-figma"></i> <span>Figma</span></div>
+          <div class="logo-item"><i class="fa-brands fa-airbnb"></i> <span>Airbnb</span></div>
+          <div class="logo-item"><i class="fa-brands fa-dropbox"></i> <span>Dropbox</span></div>
+          <!-- Duplicate for seamless loop -->
+          <div class="logo-item"><i class="fa-brands fa-google"></i> <span>Google</span></div>
+          <div class="logo-item"><i class="fa-brands fa-spotify"></i> <span>Spotify</span></div>
+          <div class="logo-item"><i class="fa-brands fa-stripe"></i> <span>Stripe</span></div>
+          <div class="logo-item"><i class="fa-brands fa-shopify"></i> <span>Shopify</span></div>
+          <div class="logo-item"><i class="fa-brands fa-slack"></i> <span>Slack</span></div>
+          <div class="logo-item"><i class="fa-brands fa-figma"></i> <span>Figma</span></div>
+          <div class="logo-item"><i class="fa-brands fa-airbnb"></i> <span>Airbnb</span></div>
+          <div class="logo-item"><i class="fa-brands fa-dropbox"></i> <span>Dropbox</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════════ -->
+  <section class="about section" id="about">
+    <div class="container about-inner">
+      <div class="about-image-wrap">
+        <div class="about-img-bg"></div>
+        <div class="about-img-card">
+          <div class="about-img-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <p>"Design is not just what it looks like — it's how it works."</p>
+        </div>
+        <!-- Abstract 3D character illustration -->
+        <div class="about-3d-figure">
+          <svg viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="figGrad1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#818cf8"/>
+                <stop offset="100%" stop-color="#6d28d9"/>
+              </linearGradient>
+              <linearGradient id="figGrad2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#a78bfa"/>
+                <stop offset="100%" stop-color="#4c1d95"/>
+              </linearGradient>
+            </defs>
+            <!-- Body -->
+            <rect x="100" y="140" width="120" height="140" rx="20" fill="url(#figGrad1)"/>
+            <!-- Head -->
+            <circle cx="160" cy="100" r="48" fill="url(#figGrad2)"/>
+            <!-- Eyes -->
+            <circle cx="147" cy="95" r="8" fill="#fff"/>
+            <circle cx="173" cy="95" r="8" fill="#fff"/>
+            <circle cx="149" cy="97" r="4" fill="#1e1b4b"/>
+            <circle cx="175" cy="97" r="4" fill="#1e1b4b"/>
+            <!-- Smile -->
+            <path d="M150 115 Q160 125 170 115" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <!-- Arms -->
+            <rect x="55" y="150" width="50" height="20" rx="10" fill="url(#figGrad2)" transform="rotate(15 55 150)"/>
+            <rect x="215" y="150" width="50" height="20" rx="10" fill="url(#figGrad2)" transform="rotate(-15 265 160)"/>
+            <!-- Laptop -->
+            <rect x="120" y="195" width="80" height="50" rx="6" fill="#0f0a1e" stroke="#7c3aed" stroke-width="2"/>
+            <rect x="110" y="245" width="100" height="6" rx="3" fill="#4c1d95"/>
+            <rect x="125" y="205" width="70" height="35" rx="3" fill="#1e1b4b"/>
+            <line x1="130" y1="215" x2="185" y2="215" stroke="#6d28d9" stroke-width="2"/>
+            <line x1="130" y1="222" x2="175" y2="222" stroke="#7c3aed" stroke-width="1.5"/>
+            <line x1="130" y1="229" x2="180" y2="229" stroke="#6d28d9" stroke-width="1.5"/>
+            <!-- Legs -->
+            <rect x="120" y="280" width="30" height="70" rx="15" fill="url(#figGrad1)"/>
+            <rect x="170" y="280" width="30" height="70" rx="15" fill="url(#figGrad1)"/>
+            <!-- Shoes -->
+            <ellipse cx="135" cy="353" rx="22" ry="10" fill="#1e1b4b"/>
+            <ellipse cx="185" cy="353" rx="22" ry="10" fill="#1e1b4b"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <div class="section-tag">About Nexus</div>
+        <h2 class="section-heading">A Studio That Turns <span class="gradient-text">Bold Ideas</span> Into Reality</h2>
+        <p class="about-text">
+          Founded in 2012, Nexus is a full-service digital agency that blends artistry with analytics. Our multidisciplinary team of designers, developers, and strategists crafts digital solutions that don't just look great — they perform.
+        </p>
+        <p class="about-text">
+          We partner with startups and enterprise brands alike, bringing the same level of passion, precision, and creativity to every project we touch.
+        </p>
+        <div class="about-features">
+          <div class="about-feat"><i class="fa-solid fa-check-circle"></i> Human-centered design approach</div>
+          <div class="about-feat"><i class="fa-solid fa-check-circle"></i> Agile, collaborative process</div>
+          <div class="about-feat"><i class="fa-solid fa-check-circle"></i> Data-informed creative decisions</div>
+          <div class="about-feat"><i class="fa-solid fa-check-circle"></i> End-to-end delivery & support</div>
+        </div>
+        <a href="#contact" class="btn-primary">Work With Us <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SERVICES
+  ═══════════════════════════════════════════ -->
+  <section class="services section" id="services">
+    <div class="orb orb-4"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">What We Do</div>
+        <h2 class="section-heading">Services Built for <span class="gradient-text">Modern Brands</span></h2>
+        <p class="section-subhead">From pixel-perfect design to full-stack development — we cover every dimension of your digital presence.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card" data-index="01">
+          <div class="service-icon-wrap"><i class="fa-solid fa-pen-nib"></i></div>
+          <h3>Graphic Design</h3>
+          <p>Brand identities, logo systems, print & digital collateral that make lasting impressions.</p>
+          <div class="service-list">
+            <details>
+              <summary>What's included</summary>
+              <ul>
+                <li>Brand identity & guidelines</li>
+                <li>Logo design & variations</li>
+                <li>Marketing materials</li>
+                <li>Packaging & print</li>
+              </ul>
+            </details>
+          </div>
+          <a href="#contact" class="service-link">Start Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card featured" data-index="02">
+          <div class="service-badge">Most Popular</div>
+          <div class="service-icon-wrap"><i class="fa-solid fa-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Scalable, performant websites and web apps engineered with the latest technologies.</p>
+          <div class="service-list">
+            <details>
+              <summary>What's included</summary>
+              <ul>
+                <li>UI/UX design & prototyping</li>
+                <li>Frontend & backend development</li>
+                <li>CMS integration</li>
+                <li>Performance optimisation</li>
+              </ul>
+            </details>
+          </div>
+          <a href="#contact" class="service-link">Start Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card" data-index="03">
+          <div class="service-icon-wrap"><i class="fa-solid fa-bullhorn"></i></div>
+          <h3>Digital Marketing</h3>
+          <p>Data-driven campaigns across SEO, paid media, social and email that drive real ROI.</p>
+          <div class="service-list">
+            <details>
+              <summary>What's included</summary>
+              <ul>
+                <li>SEO & content strategy</li>
+                <li>PPC & paid social</li>
+                <li>Email automation</li>
+                <li>Analytics & reporting</li>
+              </ul>
+            </details>
+          </div>
+          <a href="#contact" class="service-link">Start Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card" data-index="04">
+          <div class="service-icon-wrap"><i class="fa-solid fa-file-lines"></i></div>
+          <h3>Content Creation</h3>
+          <p>Compelling copy, video scripts, photography direction, and social content that resonates.</p>
+          <div class="service-list">
+            <details>
+              <summary>What's included</summary>
+              <ul>
+                <li>Copywriting & storytelling</li>
+                <li>Video & motion graphics</li>
+                <li>Photography art direction</li>
+                <li>Social media content</li>
+              </ul>
+            </details>
+          </div>
+          <a href="#contact" class="service-link">Start Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PORTFOLIO
+  ═══════════════════════════════════════════ -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Our Work</div>
+        <h2 class="section-heading">Selected <span class="gradient-text">Projects</span></h2>
+      </div>
+
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="dev">Development</button>
+        <button class="filter-btn" data-filter="marketing">Marketing</button>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-item" data-cat="design">
+          <div class="portfolio-img">
+            <div class="portfolio-placeholder p1">
+              <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="260" fill="#0f0a1e"/>
+                <circle cx="200" cy="100" r="60" fill="none" stroke="#7c3aed" stroke-width="3"/>
+                <circle cx="200" cy="100" r="40" fill="#7c3aed" opacity="0.3"/>
+                <rect x="80" y="180" width="240" height="8" rx="4" fill="#6d28d9" opacity="0.5"/>
+                <rect x="120" y="200" width="160" height="6" rx="3" fill="#4c1d95" opacity="0.5"/>
+                <text x="200" y="108" text-anchor="middle" font-family="monospace" font-size="22" fill="#a78bfa">Λ</text>
+              </svg>
+            </div>
+            <div class="portfolio-overlay">
+              <h4>Apollo Brand Identity</h4>
+              <p>Brand Design · 2024</p>
+              <a href="#" class="portfolio-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item large" data-cat="dev">
+          <div class="portfolio-img">
+            <div class="portfolio-placeholder p2">
+              <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg">
+                <rect width="600" height="380" fill="#0d0b1f"/>
+                <rect x="30" y="30" width="540" height="30" rx="6" fill="#1e1b4b"/>
+                <circle cx="55" cy="45" r="6" fill="#ef4444"/>
+                <circle cx="75" cy="45" r="6" fill="#fbbf24"/>
+                <circle cx="95" cy="45" r="6" fill="#22c55e"/>
+                <rect x="30" y="75" width="160" height="275" rx="6" fill="#1e1b4b"/>
+                <rect x="205" y="75" width="365" height="130" rx="6" fill="#1e1b4b"/>
+                <rect x="205" y="220" width="175" height="130" rx="6" fill="#1e1b4b"/>
+                <rect x="395" y="220" width="175" height="130" rx="6" fill="#1e1b4b"/>
+                <rect x="45" y="90" width="130" height="8" rx="4" fill="#4c1d95"/>
+                <rect x="45" y="110" width="100" height="6" rx="3" fill="#312e81"/>
+                <rect x="45" y="126" width="115" height="6" rx="3" fill="#312e81"/>
+              </svg>
+            </div>
+            <div class="portfolio-overlay">
+              <h4>Vela SaaS Dashboard</h4>
+              <p>Web Development · 2024</p>
+              <a href="#" class="portfolio-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-cat="marketing">
+          <div class="portfolio-img">
+            <div class="portfolio-placeholder p3">
+              <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="260" fill="#0a0f1e"/>
+                <polyline points="50,200 100,150 160,170 220,90 290,120 360,60" fill="none" stroke="#818cf8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <polyline points="50,200 100,150 160,170 220,90 290,120 360,60" fill="none" stroke="none"/>
+                <circle cx="360" cy="60" r="7" fill="#a78bfa"/>
+                <circle cx="220" cy="90" r="7" fill="#818cf8"/>
+                <rect x="50" y="215" width="40" height="35" rx="3" fill="#1e1b4b"/>
+                <rect x="100" y="190" width="40" height="60" rx="3" fill="#312e81"/>
+                <rect x="150" y="175" width="40" height="75" rx="3" fill="#4c1d95"/>
+                <rect x="200" y="145" width="40" height="105" rx="3" fill="#6d28d9"/>
+              </svg>
+            </div>
+            <div class="portfolio-overlay">
+              <h4>Nova Growth Campaign</h4>
+              <p>Digital Marketing · 2023</p>
+              <a href="#" class="portfolio-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-cat="design">
+          <div class="portfolio-img">
+            <div class="portfolio-placeholder p4">
+              <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="260" fill="#0c0a1a"/>
+                <rect x="60" y="40" width="280" height="180" rx="12" fill="#1e1b4b"/>
+                <rect x="80" y="60" width="240" height="140" rx="8" fill="#0f0a1e"/>
+                <circle cx="200" cy="130" r="45" fill="none" stroke="#7c3aed" stroke-width="20" stroke-dasharray="60 200" stroke-dashoffset="0"/>
+                <circle cx="200" cy="130" r="45" fill="none" stroke="#818cf8" stroke-width="20" stroke-dasharray="40 200" stroke-dashoffset="-60"/>
+                <circle cx="200" cy="130" r="45" fill="none" stroke="#c4b5fd" stroke-width="20" stroke-dasharray="30 200" stroke-dashoffset="-100"/>
+                <circle cx="200" cy="130" r="22" fill="#1e1b4b"/>
+                <text x="200" y="136" text-anchor="middle" font-size="14" fill="#a78bfa" font-family="monospace">73%</text>
+              </svg>
+            </div>
+            <div class="portfolio-overlay">
+              <h4>Orion Analytics UI</h4>
+              <p>UX Design · 2023</p>
+              <a href="#" class="portfolio-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item large" data-cat="dev">
+          <div class="portfolio-img">
+            <div class="portfolio-placeholder p5">
+              <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#4c1d95"/>
+                    <stop offset="100%" stop-color="#1e1b4b"/>
+                  </linearGradient>
+                </defs>
+                <rect width="600" height="380" fill="#09091a"/>
+                <rect x="0" y="0" width="600" height="75" fill="url(#pGrad)"/>
+                <text x="40" y="47" font-family="monospace" font-size="26" font-weight="bold" fill="#a78bfa">ETHER STORE</text>
+                <rect x="440" y="22" width="120" height="34" rx="17" fill="#7c3aed"/>
+                <text x="500" y="44" text-anchor="middle" font-size="13" fill="white" font-family="monospace">Shop Now</text>
+                <rect x="30" y="100" width="160" height="200" rx="10" fill="#1e1b4b"/>
+                <rect x="210" y="100" width="160" height="200" rx="10" fill="#1e1b4b"/>
+                <rect x="390" y="100" width="160" height="200" rx="10" fill="#1e1b4b"/>
+                <rect x="45" y="115" width="130" height="110" rx="6" fill="#312e81"/>
+                <rect x="225" y="115" width="130" height="110" rx="6" fill="#312e81"/>
+                <rect x="405" y="115" width="130" height="110" rx="6" fill="#312e81"/>
+                <rect x="45" y="235" width="90" height="8" rx="4" fill="#6d28d9"/>
+                <rect x="45" y="252" width="60" height="6" rx="3" fill="#4c1d95"/>
+                <rect x="225" y="235" width="90" height="8" rx="4" fill="#6d28d9"/>
+                <rect x="225" y="252" width="60" height="6" rx="3" fill="#4c1d95"/>
+                <rect x="405" y="235" width="90" height="8" rx="4" fill="#6d28d9"/>
+                <rect x="405" y="252" width="60" height="6" rx="3" fill="#4c1d95"/>
+              </svg>
+            </div>
+            <div class="portfolio-overlay">
+              <h4>Ether E-Commerce Platform</h4>
+              <p>Web Development · 2024</p>
+              <a href="#" class="portfolio-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════════════ -->
+  <section class="testimonials section">
+    <div class="orb orb-5"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Client Love</div>
+        <h2 class="section-heading">What People <span class="gradient-text">Say</span></h2>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="testi-card featured-testi">
+          <div class="testi-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <blockquote>"Nexus completely transformed our digital presence. Their team understood our vision from day one and delivered a website that exceeded every expectation — on time, on budget, and absolutely stunning."</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar av1">SR</div>
+            <div>
+              <strong>Sarah Reynolds</strong>
+              <span>CEO, Luminary Ventures</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <blockquote>"Working with Nexus felt like having an in-house design powerhouse. Their attention to detail is unmatched."</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar av2">JM</div>
+            <div>
+              <strong>James Müller</strong>
+              <span>CTO, Orion Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <blockquote>"The marketing campaigns Nexus ran for us generated a 340% increase in qualified leads. Genuinely incredible results."</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar av3">AK</div>
+            <div>
+              <strong>Aisha Kamara</strong>
+              <span>Head of Growth, Vela</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FEATURES / VALUES
+  ═══════════════════════════════════════════ -->
+  <section class="features section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Our Principles</div>
+        <h2 class="section-heading">Built on <span class="gradient-text">Core Values</span></h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-eye"></i></div>
+          <h4>Transparency</h4>
+          <p>We communicate openly at every stage — no surprises, no hidden costs, just honest collaboration.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-atom"></i></div>
+          <h4>Innovation</h4>
+          <p>We challenge conventions and embrace emerging technologies to keep your brand ahead of the curve.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-trophy"></i></div>
+          <h4>Excellence</h4>
+          <p>Average is not in our vocabulary. We pursue the best possible outcome on every deliverable.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h4>Partnership</h4>
+          <p>We treat your goals as our goals — a long-term relationship, not just a transaction.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-rocket"></i></div>
+          <h4>Speed</h4>
+          <p>Fast delivery cycles and agile methodology mean your ideas reach market without unnecessary delays.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-chart-bar"></i></div>
+          <h4>Results-Driven</h4>
+          <p>Every creative decision is anchored in data, strategy, and a clear definition of success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA BANNER
+  ═══════════════════════════════════════════ -->
+  <section class="cta-banner" id="contact">
+    <div class="cta-orb"></div>
+    <div class="container cta-inner">
+      <div class="cta-content">
+        <h2>Ready to Build Something <span class="gradient-text">Extraordinary?</span></h2>
+        <p>Let's talk about your project. We typically respond within 24 hours.</p>
+        <div class="cta-buttons">
+          <a href="mailto:hello@nexus.studio" class="btn-primary btn-lg">Start a Project <i class="fa-solid fa-paper-plane"></i></a>
+          <a href="tel:+15551234567" class="btn-ghost btn-lg"><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</a>
+        </div>
+      </div>
+      <div class="cta-visual">
+        <div class="cta-3d">
+          <svg viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ctaGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#a78bfa"/>
+                <stop offset="100%" stop-color="#3b82f6"/>
+              </linearGradient>
+            </defs>
+            <circle cx="130" cy="130" r="110" fill="none" stroke="url(#ctaGrad)" stroke-width="2" stroke-dasharray="8 6"/>
+            <circle cx="130" cy="130" r="75" fill="#1e1b4b"/>
+            <text x="130" y="118" text-anchor="middle" font-size="40" fill="url(#ctaGrad)">✉</text>
+            <text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="14" fill="#a78bfa">Let's Talk</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-mark">N</span>
+          <span class="logo-text">NEXUS</span>
+        </a>
+        <p>A digital agency crafting bold experiences for ambitious brands worldwide.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+          <a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#">Graphic Design</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Digital Marketing</a></li>
+          <li><a href="#">Content Creation</a></li>
+          <li><a href="#">Brand Strategy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-envelope"></i> hello@nexus.studio</li>
+          <li><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</li>
+          <li><i class="fa-solid fa-location-dot"></i> 180 Fifth Ave, New York, NY 10010</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Nexus Studio. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Cursor glow
+    const glow = document.getElementById('cursorGlow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
+
+    // Sticky header
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('open');
+    });
+
+    // Close nav on link click
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    // Portfolio filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        portfolioItems.forEach(item => {
+          if (filter === 'all' || item.dataset.cat === filter) {
+            item.style.display = '';
+            item.style.opacity = '0';
+            setTimeout(() => item.style.opacity = '1', 50);
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.service-card, .portfolio-item, .testi-card, .feature-item, .about-inner, .hero-content, .hero-visual');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+
+    // Active nav on scroll
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 120) current = sec.getAttribute('id');
+      });
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
+    });
+  </script>
+</body>
+</html>
